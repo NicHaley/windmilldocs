@@ -6,7 +6,7 @@ Synchronizing folders & git repositories to a Windmill instance is made easy
 using the wmill CLI. Syncing operations are behind the `wmill sync` subcommand.
 
 Having a Windmill instance synchronized to folders & git repositories allows for
-local development through the [VS Codeextension](../../cli_local_dev/1_vscode-extension/index.mdx).
+local development through the [VS Code extension](../../cli_local_dev/1_vscode-extension/index.mdx).
 
 <div class="grid grid-cols-2 gap-6 mb-4">
 	<DocCard
@@ -22,7 +22,7 @@ Raw syncing will soon become the default.
 
 Raw syncing is a one-off operation with no state maintained. When using Windmill EE and [Git Sync](../11_git_sync/index.mdx),
 this is what you should use since Git Sync will always keep your git repo up-to-date.
-When not used in with Git Sync. It's best used for
+When not used with Git Sync, it's best used for
 making backups, cloning a complete workspace, and similar one-off operations.
 
 Raw syncing is done using `wmill sync pull --raw` & `wmill sync push --raw`
@@ -32,7 +32,7 @@ Raw syncing is done using `wmill sync pull --raw` & `wmill sync push --raw`
 `wmill sync pull --raw` will simply pull all files from the currently
 [selected workspace](./workspace-management.md#selected-workspace) and store
 them in the current folder. Overwrites will not prompt the user. Make sure you
-are in the correct folder or you may loose data.
+are in the correct folder or you may lose data.
 
 ### Pushing
 
@@ -45,7 +45,7 @@ updating the remote equivalents.
 Stateful syncing is currently the default but will soon require the --stateful flag
 
 Stateful syncing is best used when your Git repo and windmill workspace might diverge (because of not using [Git Sync](../11_git_sync/index.mdx))
-and you want to keep track of the state the last time you pulled to check for merge conflicts.The CLI will automatically
+and you want to keep track of the state the last time you pulled to check for merge conflicts. The CLI will automatically
 maintain state for you and ensure modifications that happen concurrently on the remote and locally stay in sync.
 
 ### Pulling
